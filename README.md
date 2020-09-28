@@ -1,2 +1,2 @@
 # EA-Connectors
-Enterprise Architect VBScripts for Connector (Association) Code Generation
+Enterprise Architect VBScripts for Code Generation of EA.Connectors (Associations)
