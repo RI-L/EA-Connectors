@@ -4,9 +4,13 @@ Option Explicit
 !INC Connectors.Connector
 !INC Connectors.Connector_Utils
 
-''' ------------------------
+''' ===========================================================================
 ''' TESTING CONNECTOR HELPER
-''' ------------------------
+''' ===========================================================================
+'''
+''' VERSION			: 0.9.1, 20200927 - Edited description text.
+''' 				: 0.9.0, 20151201 - initial commit, 
+
 
 Private Sub Module_Initialize()
 	''' Ensure initialization of the variable as to prepare 

@@ -8,44 +8,39 @@
 ''' ===========================================================================
 ''' CONNECTOR WRAPPER
 ''' ===========================================================================
-''' VERSION			: 0.9.0
-'''	RELEASE DATE	: 2015-12-08
-''' HISTORY			: 
+'''
+''' VERSION			: 0.9.1, 20200927 - Edited description text.
+''' 				: 0.9.0, 20151201 - initial commit, 
 '''
 ''' DESCRIPTION		: A Connector Helper wrapper intending to provide access 
-'''					  to Connector properties and concepots with a consistent
-''' 				  and "use perspective" of an assication, rather than only
-'''					  a technical specification of the model element as such.
-'''					  This means in practice for example that end roles are
-'''					  named as <CurrentClass>.nearEnd and the interesting role
-'''					  as viewd from the calling class: <CurrentClass>.otherEnd
+'''					  to EA Connector properties and concepts with a consistent
+''' 				  "user perspective" of associations rather than only the
+'''					  technical terms for the EA model elements.
+'''					  This means in practice for example that end roles, as seen 
+'''					  from the viewpoint class, are named <CurrentClass>.nearEnd 
+'''                   and the role of the far end again, as viewed from the
+'''					  calling class, is named <CurrentClass>.otherEnd.
 ''' 				  In short: The "otherEnd" would correspond to the roleName
-'''					  which is actually a member of the class at the "nearEnd."
-''' 
-''' AUTHOR			: Rolf Lampa, RIL Partner AB, rolf.lampa@rilnet.com
+'''					  of the actual class member of the class at the "nearEnd."
+'''
+''' AUTHOR			: Rolf Lampa, RIL Partner AB, laromai@rilnet.com
 '''
 ''' COPYRIGHT		: (C) Rolf Lampa, 2015. Free to use for commercial projects 
 '''				  	  if giving proper attribution to the author and providing 
 '''					  this copyright info visible in your code and product 
-'''					  documentation, including donation info below.
+'''					  documentation.
 '''
-''' DONATIONS		: If you find the script being useful you may consider 
-'''					  making a donation. All amounts amounts. For Paypal 
-'''					  donations, use the following url:
-'''
-''' 
-'''
-''' DEPENDENCIES 	: None. The script should work as is inside Enterprise 
+''' DEPENDENCIES 	: None, except for being used together with the wrapper for the 
+'''					  EA.Connector. The script should work 'as is' inside Enterprise 
 '''					  Architect. 
-''' TESTED			: Run on Enterprise Architect 12.1 Beta, using the file
+''' TESTED			: Tested on Enterprise Architect 12.1 Beta, using the file
 '''					  for simple property access
-'''
 ''' ===========================================================================
 
 
 
-Dim m_conapi 	''' You may want to use this variable directly, the after first 
-				''' access to the ConApi
+Dim m_conapi 		''' You may want to use this variable directly after initialized
+					''' in the first access of the ConApi pseudo 'property'.
 
 Public Function ConApi()
 	''' Ensure that the TaggedVaslue helper is created only once.
@@ -439,4 +434,4 @@ Class TWConnector
 End Class ''' CONNECTOR WRAPPER
 
 
-Initialize_ConApi
+Initialize_ConAp
